@@ -5,33 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="th/count/css/flipTimer.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+
+    <script src ="th/count/js/jquery.flipTimer.js"></script>
 </head>
   
 <body>
-<p>helloworld</p>
-<h1>warinig</h1>
-<h2>helloo warning</h2>
-<h3>hello warinig 2</h3>
-
-
-<ul id ="list">
-    <li>red</li>
-    <li>black</li>
-   
-
-</ul>
-
-
+    
+    <div class="flipTimer">
+        
+          <div class="days"></div>
+        
+          <div class="hours"></div>
+        
+          <div class="minutes"></div>
+        
+          <div class="seconds"></div>
+        
+        </div>
+        
+ 
 
 <script>
-   $("#list").append("<li>urple</li>");
-   $("#list").prepend("<li>upp</li>")
-   $("#list").after("<p>this is a paragarpah</p>")
-   $("#list").before("<p>tihs is beofre paragraoh</p>")
+
+$(document).ready(function() {
+$('.flipTimer').flipTimer({ 
+
+// count up or countdown
+direction: 'down', 
+
+// the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+date: 'January 20, 2023 08:30:30', 
+
+// callback works only with direction = "down"
+callback: function() { alert('times up!'); }
+
+});
+});
+ 
 
 
-    
  </script>
 </body>
 </html>
